@@ -1,18 +1,21 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+<ion-toolbar color="jardim">
+  <button ion-button menuToggle left>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+    <ion-title>Sua localização</ion-title>
+</ion-toolbar>
+ 
+<ion-content>
+  <div #map id="map"></div>  
 </ion-content>
+
+<ion-footer>
+  <div class="btn-wrapper">
+    <ion-item-divider class="copyright cell-row-color text-center">
+      <span> O Jardim Botânico fica a  {{theDistance}}Km. </span>
+    </ion-item-divider>
+    <div padding>
+    <button ion-button block small color="jardim" (click)="distance()"><i>Jardim Botânico</i></button>
+  </div>
+  </div>
+</ion-footer>

@@ -1,16 +1,20 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
+<ion-menu [content]="content" persistent="true">
+  <ion-header no-border>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
+  <ion-content class="menu-content bg-menu">
+
+  <div class="wrapper box-menu" no-border>
+    <img class="item-avatar" src="assets/img/monkey.png">
+    <p class="name">Jardim Botânico</p>     
+  </div>
+
+  <ion-list class="item-ovelha-inner">
+    <button class="bg-itens" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+    <ion-icon [name]="p.icon" color="dark" class="icon-monkey"></ion-icon>
+    <label class="text-bloco">{{p.title}}</label>
+    </button>
+  </ion-list>
   </ion-content>
 
 </ion-menu>

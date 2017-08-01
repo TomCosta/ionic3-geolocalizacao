@@ -1,3 +1,85 @@
 page-list {
+    
+.item.item-block.item-md{
+    height: 50px;
+    background: none;
+}    
 
+.copyright{
+    font-size: 80%;
+}
+
+.padding-top-50{
+  padding-top: 70%;
+}
+
+.monkey-avatar {
+    margin: 0px;
+    width: 120px;
+    position: relative;
+    border-radius: 60%;
+    display: inline-block;
+    border: 2px solid #fff;    
+    box-shadow: 2px 6px 6px 2px rgba(0,0,0,.26);
+    background-color: #008000;
+  }
+
+.ovelha-block{
+    height: 160px;
+}
+
+.class-90{
+    width: 96%;
+}
+
+.ovelha-block{
+  display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.policy-txt{
+    font-size: 80%;
+    font-style: italic;
+}
+
+.cell-row-color {
+    color: #333333;
+    background-color: #e68a00;
+}
+
+.cor-borda{
+  border: solid 1px;
+  border-color: #f2f2f2;
+  padding-bottom: 0;
+}
 }

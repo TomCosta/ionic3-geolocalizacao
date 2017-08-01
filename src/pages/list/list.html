@@ -1,23 +1,47 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+<ion-header no-border>
+  <ion-navbar color="jardim">
+    <button ion-button menuToggle color="secondary">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>List</ion-title>
+    <ion-title>Cidades</ion-title>
   </ion-navbar>
+
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-left></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-right>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  
+<div class="ovelha-block cell-row-color padding-top">
+    <img class="monkey-avatar" src="assets/img/monkey.png" alt="macaco">
+</div>
+
+  <div class="col text-center" padding>
+
+  <ion-item no-lines>
+  <ion-label class="policy-txt">Exibir lista das cidades do Paraná</ion-label>
+  <ion-checkbox color="jardim" [disabled]="hidden" (click)="select();"></ion-checkbox>
+  </ion-item>
+
+  <ion-card *ngIf="seencities === true">
+  <h4>Lista das cidades</h4>
+      <ion-list>
+      <ion-item *ngFor="let city of cities" text-wrap>
+          <p>Cod. IBGE: {{city.ibge}} Cidade: {{city.nome}}</p>
+          <button ion-button small color="primary" (click)="update(person.id, person.phone)" item-end><ion-icon name="call">&nbsp; Edit</ion-icon></button> 
+          <button ion-button small color="danger" (click)="delete(person.id)" item-end><ion-icon name="trash">&nbsp; Del</ion-icon></button>       
+      </ion-item>
+    </ion-list> 
+  </ion-card>
+
+</div>
 </ion-content>
+
+<ion-footer>
+  <div class="btn-wrapper">
+    <ion-item-divider class="copyright cell-row-color text-center">
+      © Aplicativo teste realizado por Everton Costa.
+    </ion-item-divider>
+    <div padding>
+    <button ion-button block small color="dark" (click)="doLogout()"><i>Sair</i></button>
+  </div>
+  </div>
+</ion-footer>
