@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
-import { HomePage } from '../home/home';
 import { SQLite } from '@ionic-native/sqlite';
 // import { SqlStorageProvider } from '../../providers/sql-storage/sql-storage';
 

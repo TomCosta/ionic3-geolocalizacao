@@ -13,7 +13,7 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage // LoginPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, icon:string, component: any}>;
 
