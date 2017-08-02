@@ -59,11 +59,7 @@ export class HomePage {
 }
 
   distance(){
-    this.applyHaversine().then(res => {
-    // The logic after you have your new results goes here.
-    this.theDistance = res;
-    console.log(res); // res will be the value that you passed into the resolve function above, in this case your updated locations array
-    })
+    this.theDistance = this.applyHaversine();
   }
 
   applyHaversine() {
@@ -79,12 +75,12 @@ export class HomePage {
       lat: -25.4421,
       lng: -49.2387
     };
-
+   
     this.theDistance = this.getDistanceBetweenPoints(
       usersLocation,
       jardimLocation,
       'km'
-    ).toFixed(4);
+    ).toFixed(2);
 
     resolve(); // As soon as this is called, the "then" in will be executed in the function below.
 
@@ -97,7 +93,7 @@ export class HomePage {
           miles: 3958.8,
           km: 6371
       };  
-      let R = earthRadius[units || 'miles'];
+      let R = earthRadius[units || 'km'];
       let lat1 = start.lat;
       let lon1 = start.lng;
       let lat2 = end.lat;
